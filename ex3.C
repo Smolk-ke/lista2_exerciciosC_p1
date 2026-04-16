@@ -17,11 +17,11 @@ int main(){
 
     media = (nota1+nota2+nota3+nota4)/4;
     if(media>7){
-        printf("SITUACAO: APROVADO");
+        printf("SITUACAO: APROVADO\n");
     }else if(media>5){
-        printf("SITUACAO: RECUPERACAO");
+        printf("SITUACAO: RECUPERACAO\n");
     }else{
-        printf("SITUACAO: REPROVADO");
+        printf("SITUACAO: REPROVADO\n");
     }
     return 0;
 }
