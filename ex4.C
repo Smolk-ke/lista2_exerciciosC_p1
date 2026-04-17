@@ -77,7 +77,6 @@ int main(){
             for (int i=0; i<=100; i++){
                 x = (x+num1/x)/2;
             }
-            // sim, meu amigo, lhe fizeram mal foi?KKKKKKKKKKKKKKKKKKKKKK questões legais essas com polinomios de newton.
             resultado = x;
             printf("Resultado: %.2f", resultado);
             break;
