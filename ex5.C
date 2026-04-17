@@ -5,25 +5,30 @@
 int main(){
     int valor;
     
-    printf("Informe um numero:");
+    printf("Informe um numero: ");
     scanf("%d", &valor);
 
-    if((valor%3==0)&&(valor%5==0)&&(valor%7==0)){
-        printf("O valor e divisivel por 3, 5 e 7.");
-    }else if((valor%3==0)&&(valor%5==0)&&(valor%7!=0)){
-        printf("O valor nao e divisivel por 7.");
-    }else if((valor%3==0)&&(valor%5!=0)&&(valor%7==0)){
-        printf("O valor nao e divisivel por 5.");
-    }else if((valor%3!=0)&&(valor%5==0)&&(valor%7==0)){
-        printf("O valor nao e divisivel por 3.");
-    }else if((valor%3==0)&&(valor%5!=0)&&(valor%7!=0)){
-        printf("O valor nao e divisivel por 5 e 7.");
-    }else if((valor%3!=0)&&(valor%5!=0)&&(valor%7==0)){
-        printf("O valor nao e divisivel por 5 e 3.");
-    }else if((valor%3!=0)&&(valor%5==0)&&(valor%7!=0)){
-        printf("O valor nao e divisivel por 3 e 7.");
-    }else{
-        printf("O valor nao e divisivel por 3, 5 e 7");
+    if((valor % 3 == 0) && (valor % 5 == 0) && (valor % 7 == 0)){
+        printf("O valor e divisivel por 3, 5 e 7.\n");
+    } else {
+        int divisivel = 0;
+
+        if(valor % 3 == 0){
+            printf("Divisivel por 3\n");
+            divisivel = 1;
+        }
+        if(valor % 5 == 0){
+            printf("Divisivel por 5\n");
+            divisivel = 1;
+        }
+        if(valor % 7 == 0){
+            printf("Divisivel por 7\n");
+            divisivel = 1;
+        }
+        //Fiz assim por teste, por isso ta sem else e com negacao, ok?
+        if(!divisivel){
+            printf("Nao e divisivel por 3, 5 nem 7\n");
+        }
     }
     return 0;
 }

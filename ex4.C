@@ -73,12 +73,16 @@ int main(){
         case 6:
             printf("Informe um numero: ");
             scanf("%f", &num1);
-            x = num1;
-            for (int i=0; i<=100; i++){
-                x = (x+num1/x)/2;
+            if(num1>0){
+                x = num1;
+                for (int i=0; i<=100; i++){
+                    x = (x+num1/x)/2;
+                }
+                resultado = x;
+                printf("Resultado: %.2f\n", resultado);
+            }else{
+                printf("A raiz não se encontra no conjunto dos numeros reais.\n");
             }
-            resultado = x;
-            printf("Resultado: %.2f", resultado);
             break;
         default:
             printf("Opcao invalida\n");
